@@ -4,7 +4,7 @@
 @Descripttion: 变量作用域测试
 @Date: 2019-07-27 19:54:24
 @LastEditors: AnakinJiang
-@LastEditTime: 2019-07-27 21:25:57
+@LastEditTime: 2019-09-30 20:56:06
 '''
 def if_for_test():
     '''测试if/elif/else/ try/except for/while的作用域
@@ -66,7 +66,21 @@ def closure_test():
 
     print(external())
 
+gcount = 0
+def global_test():
+    global gcount
+    gcount+=1
+    print (gcount)
 if __name__ == '__main__':
     # if_for_test()
     # def_test()
     closure_test()
+    # global_test()
+    # print(gcount)
+# def a():
+#     param = 'b'  # 这里就会出现这样的提示，因为在main定义的param对象被重新指定了新的值
+#     print(param)
+# if __name__ == '__main__':
+#     param = 'a'
+#     a()
+#     print(param)
